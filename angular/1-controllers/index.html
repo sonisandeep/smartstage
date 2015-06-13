@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="githubViewer">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.16/angular.js"></script>
+		<script src="script.js" type="text/javascript" charset="utf-8"></script>
+		<title>Title Page</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<h1 class="text-center">GitHub User</h1>
+		<div ng-controller="UserController">
+			
+
+		<ul class="list list-group">
+			<li>First Name: {{person.firstName}}</li>
+			<li>Last Name: {{person.lastName}}</li>
+			<li>Image: <img src="{{person.imageSource}}" title="{{person.firstName}} {{person.lastName}}" height="100" width="100"/></li>
+			<li></li>
+		</ul>
+
+		</div>
+
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	</body>
+</html>

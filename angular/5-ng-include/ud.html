@@ -1,0 +1,31 @@
+<div>
+    <ul class="list list-group">
+        <li>First Name: {{person.firstName}}</li>
+        <li>Last Name: {{person.lastName}}</li>
+        <li>Image: <img ng-src="{{person.avatar_url}}" title="{{person.firstName}} {{person.lastName}}" height="100" width="100" />
+        </li>
+    </ul>
+
+    <!--<select ng-model="repoSortOrder">-->
+    <!--	<option value="+stargazers_count">Stars - ASC</option>-->
+    <!--	<option value="-stargazers_count">Stars - DESC</option>-->
+    <!--	<option value="-name">Name - DESC</option>-->
+    <!--</select>-->
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Language</th>
+                <th>Stars</th>
+            </tr>
+        </thead>
+        <tr ng-repeat="repo in repos | orderBy: '-stargazers_count'">
+            <!--<tr ng-repeat="repo in repos | orderBy: repoSortOrder">-->
+            <td>{{repo.name}}</td>
+            <td>{{repo.language}}</td>
+            <td>{{repo.stargazers_count | number}}</td>
+        </tr>
+
+    </table>
+</div>
